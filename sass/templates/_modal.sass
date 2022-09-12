@@ -1,0 +1,98 @@
+.modal
+    position: fixed
+    z-index: 199
+    left: 0
+    right: 0
+    top: 0
+    bottom: 0
+    display: flex
+    align-items: flex-start
+    justify-content: center
+    overflow: auto
+    &__container
+        min-height: 100%
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 100%
+        padding: 10px
+    &-q
+        &__label
+            display: block
+            cursor: pointer
+            position: relative
+            padding-left: 50px
+            margin: 10px
+            width: 100%
+            max-width: 250px
+            &__text
+                display: block
+                font-family: 'Raleway'
+                font-style: normal
+                font-weight: 500
+                font-size: 24px
+                line-height: 120%
+                color: #104235
+                text-align: left
+        &__radio
+            display: none
+            &:checked + .modal-q__ok
+                background: #FFBD00
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+                border-color: #FFBD00
+        &__ok
+            display: block
+            border-radius: 50%
+            width: 30px
+            height: 30px
+            background: #FFFFFF
+            border: 1px solid rgba(16, 66, 53, 0.5)
+            position: absolute
+            left: 0
+            top: 50%
+            transform: translateY(-50%)
+        &__buttons
+            width: 100%
+            max-width: 534px
+            display: flex
+            justify-content: space-between
+            margin: auto
+        &__button
+            width: 257px
+        &__box
+            width: 100%
+            max-width: 645px
+            margin: auto
+            margin-bottom: 90px
+            display: flex
+            flex-wrap: wrap
+            justify-content: space-between
+            align-items: flex-start
+        &__title
+            font-family: 'Playfair'
+            font-style: normal
+            font-weight: 900
+            font-size: 48px
+            line-height: 120%
+            color: #007F5F
+            margin-bottom: 45px
+        &__text
+            font-family: 'Raleway'
+            font-style: normal
+            font-weight: 500
+            font-size: 36px
+            line-height: 120%
+            color: #AACC00
+            margin-bottom: 50px
+        &__close
+            position: absolute
+            top: 15px
+            right: 15px
+            cursor: pointer
+        &__dialog
+            width: 100%
+            max-width: 1126px
+            background: url(../img/modal/bg.png) no-repeat center/cover, #fff
+            position: relative
+            padding: 70px 10px
+            text-align: center
