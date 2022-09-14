@@ -7,6 +7,40 @@
     overflow: hidden
     padding-top: 136px
     padding-bottom: 126px
+    &--thanks
+        &__text
+            display: none
+            width: 100%
+            max-width: 744px
+            font-family: 'Raleway'
+            font-style: normal
+            font-weight: 900
+            font-size: 32px
+            line-height: 120%
+            text-align: center
+            color: #FFFFFF
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.7)
+            position: absolute
+            left: 50%
+            transform: translate(-50%)
+            top: 45%
+            z-index: 3
+        .main--thanks__text
+            display: block
+            animation: fadeInDown 1s
+        .main__text-bg
+            font-size: 140px
+            line-height: 110%
+            color: #FFFFFF
+            text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.7)
+            opacity: 1
+            width: 100%
+            transform: translate(-50%, -50%)
+            animation: fadeInDown1 1s
+        h1, .main__wrap
+            transition: 0.5s
+            opacity: 0
+            visibility: hidden
     &__footer
         width: 100%
         &__card
@@ -87,6 +121,12 @@
         top: 33%
         min-height: 67%
         max-width: none
+        &--thanks
+            display: none
+            position: absolute
+            left: 50%
+            transform: translateX(-50%)
+            animation: fadeIn 1s
     &__text-bg
         font-family: 'Playfair'
         font-style: normal

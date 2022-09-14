@@ -403,6 +403,7 @@ body {
   width: 100%;
   padding: 20px;
   border: 1px solid rgba(16, 66, 53, 0.5);
+  border-radius: 15px;
   background: #fff;
   color: #104235;
   font-family: "Raleway", sans-serif;
@@ -412,6 +413,12 @@ body {
 }
 .input:focus {
   outline: none;
+}
+
+.input-group {
+  width: 100%;
+  margin-bottom: 15px;
+  position: relative;
 }
 
 @-webkit-keyframes toRight {
@@ -486,6 +493,55 @@ body {
   align-items: center;
 }
 
+@-webkit-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+@-webkit-keyframes fadeInDown1 {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+@keyframes fadeInDown1 {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .header {
   padding-top: 18px;
   padding-bottom: 18px;
@@ -493,6 +549,18 @@ body {
   margin-bottom: -120px;
   position: relative;
   z-index: 1;
+}
+.header--thanks__button {
+  display: none;
+}
+.header--thanks .header__box, .header--thanks .header__tel {
+  display: none;
+}
+.header--thanks .header--thanks__button {
+  display: block;
+}
+.header__close {
+  display: none;
 }
 .header__tel {
   display: none;
@@ -532,6 +600,45 @@ body {
   overflow: hidden;
   padding-top: 136px;
   padding-bottom: 126px;
+}
+.main--thanks__text {
+  display: none;
+  width: 100%;
+  max-width: 744px;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 120%;
+  text-align: center;
+  color: #FFFFFF;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.7);
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  top: 45%;
+  z-index: 3;
+}
+.main--thanks .main--thanks__text {
+  display: block;
+  -webkit-animation: fadeInDown 1s;
+  animation: fadeInDown 1s;
+}
+.main--thanks .main__text-bg {
+  font-size: 140px;
+  line-height: 110%;
+  color: #FFFFFF;
+  text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.7);
+  opacity: 1;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  -webkit-animation: fadeInDown1 1s;
+  animation: fadeInDown1 1s;
+}
+.main--thanks h1, .main--thanks .main__wrap {
+  transition: 0.5s;
+  opacity: 0;
+  visibility: hidden;
 }
 .main__footer {
   width: 100%;
@@ -625,6 +732,14 @@ body {
   min-height: 67%;
   max-width: none;
 }
+.main__img--thanks {
+  display: none;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
 .main__text-bg {
   font-family: "Playfair";
   font-style: normal;
@@ -662,6 +777,87 @@ body {
   align-items: center;
   width: 100%;
   padding: 10px;
+}
+.modal-l__buttons {
+  width: 100%;
+  max-width: 534px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.modal-l__button {
+  width: calc(50% - 10PX);
+}
+.modal-l__close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+}
+.modal-l__box {
+  max-width: 574px;
+  margin: auto;
+  margin-bottom: 100px;
+}
+.modal-l__title {
+  font-family: "Playfair";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 120%;
+  color: #007F5F;
+  max-width: 666px;
+  margin: auto;
+  margin-bottom: 45px;
+}
+.modal-l__dialog {
+  width: 100%;
+  max-width: 1126px;
+  background: url(../img/modal/bg.png) no-repeat center/cover, #fff;
+  position: relative;
+  padding: 120px 10px;
+  text-align: center;
+}
+.modal-m__button {
+  width: 260px;
+}
+.modal-m__box {
+  max-width: 575px;
+  margin: auto;
+  margin-bottom: 45px;
+  width: 100%;
+}
+.modal-m__text {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 120%;
+  color: #AACC00;
+  margin-bottom: 30px;
+}
+.modal-m__title {
+  font-family: "Playfair";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 120%;
+  color: #007F5F;
+  margin-bottom: 15px;
+}
+.modal-m__close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+}
+.modal-m__dialog {
+  width: 100%;
+  max-width: 1126px;
+  background: url(../img/modal/bg.png) no-repeat center/cover, #fff;
+  position: relative;
+  padding: 140px 10px;
+  text-align: center;
 }
 .modal-q__label {
   display: block;
@@ -755,6 +951,11 @@ body {
   text-align: center;
 }
 
+@media screen and (max-width: 1850px) {
+  .main--thanks .main__text-bg {
+    font-size: 100px;
+  }
+}
 @media screen and (max-width: 1600px) {
   .main {
     padding-bottom: 60px;
@@ -768,13 +969,26 @@ body {
   .main {
     padding-bottom: 40px;
   }
+  .main--thanks .main__text-bg {
+    font-size: 80px;
+  }
   .main__text-bg {
     font-size: 125px;
   }
 }
 @media screen and (max-width: 1200px) {
+  .modal-m__dialog, .modal-l__dialog {
+    max-width: 950px;
+  }
   .main {
     padding-top: 110px;
+  }
+  .main--thanks__text {
+    font-size: 22px;
+    max-width: 600px;
+  }
+  .main--thanks .main__text-bg {
+    font-size: 60px;
   }
   .main__text {
     font-size: 28px;
@@ -794,6 +1008,21 @@ body {
   }
 }
 @media screen and (max-width: 991px) {
+  .modal-l__dialog {
+    padding: 60px 10px;
+  }
+  .modal-l__buttons {
+    max-width: 490px;
+  }
+  .modal-l__box {
+    max-width: 535px;
+  }
+  .modal-l__title {
+    max-width: 610px;
+  }
+  .modal-m__dialog, .modal-l__dialog {
+    max-width: 700px;
+  }
   .modal-q__box {
     margin-bottom: 60px;
     max-width: 570px;
@@ -810,12 +1039,28 @@ body {
   .header {
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.8) 60%, rgba(255, 255, 255, 0) 100%);
   }
+  .header--thanks .header__close {
+    display: block;
+  }
+  .header--thanks .header--thanks__button {
+    display: none;
+  }
   .main {
     height: auto;
     padding-top: 82px;
     padding-bottom: 30px;
     min-height: 0;
     max-height: none;
+  }
+  .main--thanks .main__wrap {
+    display: none;
+  }
+  .main--thanks__text {
+    font-size: 18px;
+    max-width: 500px;
+  }
+  .main--thanks .main__text-bg {
+    font-size: 50px;
   }
   .main__title {
     margin-bottom: 180px;
@@ -851,6 +1096,69 @@ body {
   }
 }
 @media screen and (max-width: 767px) {
+  .button {
+    font-size: 18px;
+    padding: 18px 0;
+  }
+  .input-group {
+    margin-bottom: 10px;
+  }
+  .input {
+    font-size: 16px;
+  }
+  .modal-l__close {
+    top: 10px;
+    right: 10px;
+    width: 20px;
+  }
+  .modal-l__button {
+    width: 100%;
+  }
+  .modal-l__button:last-child {
+    margin-bottom: 15px;
+  }
+  .modal-l__buttons {
+    display: flex;
+    flex-direction: column-reverse;
+    max-width: 400px;
+  }
+  .modal-l__box {
+    margin-bottom: 35px;
+    max-width: 400px;
+  }
+  .modal-l__title {
+    font-size: 20px;
+    margin-bottom: 25px;
+    max-width: 450px;
+  }
+  .modal-l__dialog {
+    max-width: 555px;
+    padding: 25px 10px 110px;
+  }
+  .modal-m__button {
+    width: 100%;
+    max-width: 400px;
+  }
+  .modal-m__title {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  .modal-m__text {
+    font-size: 16px;
+    margin-bottom: 25px;
+  }
+  .modal-m__box {
+    max-width: 400px;
+  }
+  .modal-m__close {
+    top: 10px;
+    right: 10px;
+    width: 20px;
+  }
+  .modal-m__dialog {
+    padding: 100px 10px;
+    max-width: 555px;
+  }
   .modal-q__button {
     width: 100%;
     max-width: 280px;
@@ -898,6 +1206,21 @@ body {
     background: url(../img/bgC.png) no-repeat center top;
     padding-bottom: 25px;
   }
+  .main--thanks {
+    background: url(../img/thanks/bgC.png) no-repeat center top;
+  }
+  .main--thanks .main__text-bg {
+    top: 30%;
+  }
+  .main--thanks .main__img--thanks--c {
+    display: block;
+    top: 30%;
+    min-width: 100%;
+    min-height: 70%;
+  }
+  .main--thanks .main__text-bg {
+    display: block;
+  }
   .main__footer__card {
     margin: 5px;
   }
@@ -929,6 +1252,25 @@ body {
 @media screen and (max-width: 575px) {
   .main {
     background: url(../img/bgM.png) no-repeat center 0;
+  }
+  .main--thanks {
+    background: url(../img/thanks/bgM.png) no-repeat center 0;
+  }
+  .main--thanks .main__text-bg {
+    font-size: 40px;
+    top: 200px;
+  }
+  .main--thanks .main--thanks__text {
+    top: 260px;
+  }
+  .main--thanks .main__img--thanks--c {
+    display: none;
+  }
+  .main--thanks .main__img--thanks--m {
+    display: block;
+    top: 30%;
+    min-width: 100%;
+    min-height: 70%;
   }
   .main__footer__card {
     width: 100%;

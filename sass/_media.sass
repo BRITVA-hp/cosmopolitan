@@ -1,3 +1,8 @@
+@media screen and ( max-width: 1850px )
+    .main--thanks
+        .main__text-bg
+            font-size: 100px
+
 @media screen and ( max-width: 1600px )
     .main
         padding-bottom: 60px
@@ -8,12 +13,26 @@
 @media screen and ( max-width: 1400px )
     .main
         padding-bottom: 40px
+        &--thanks
+            .main__text-bg
+                font-size: 80px
         &__text-bg
             font-size: 125px
 
 @media screen and ( max-width: 1200px )
+    .modal
+        &-m, &-l
+            &__dialog
+                max-width: 950px
+
     .main
         padding-top: 110px
+        &--thanks
+            &__text
+                font-size: 22px
+                max-width: 600px
+            .main__text-bg
+                font-size: 60px
         &__text
             font-size: 28px
         &__title
@@ -32,6 +51,18 @@
 
 @media screen and ( max-width: 991px )
     .modal
+        &-l
+            &__dialog
+                padding: 60px 10px
+            &__buttons
+                max-width: 490px
+            &__box
+                max-width: 535px
+            &__title
+                max-width: 610px
+        &-m, &-l
+            &__dialog
+                max-width: 700px
         &-q
             &__box
                 margin-bottom: 60px
@@ -45,12 +76,25 @@
 
     .header
         background: linear-gradient(180deg, rgba(255, 255, 255, 0.8) 60%, rgba(255, 255, 255, 0) 100%)
+        &--thanks
+            .header__close
+                display: block
+            .header--thanks__button
+                display: none
     .main
         height: auto
         padding-top: 82px
         padding-bottom: 30px
         min-height: 0
         max-height: none
+        &--thanks
+            .main__wrap
+                display: none
+            &__text
+                font-size: 18px
+                max-width: 500px
+            .main__text-bg
+                font-size: 50px
         &__title
             margin-bottom: 180px
         &__wrap
@@ -78,48 +122,109 @@
             transform: translate(-50%, -50%)
 
 @media screen and ( max-width: 767px )
-    .modal-q
-        &__button
-            width: 100%
-            max-width: 280px
-            &:last-child
-                margin-bottom: 15px
-        &__buttons
-            flex-direction: column-reverse
-            align-items: center
-        &__close
-            top: 10px
-            right: 10px
-            width: 20px
-        &__dialog
-            padding: 25px 10px
-        &__box
-            flex-direction: column
-            max-width: 195px
-            margin-bottom: 35px
-        &__ok
-            width: 25px
-            height: 25px
-        &__label
-            padding-left: 40px
-            width: auto
+    .button
+        font-size: 18px
+        padding: 18px 0
+    .input-group
+        margin-bottom: 10px
+    .input
+        font-size: 16px
+    .modal
+        &-l
+            &__close
+                top: 10px
+                right: 10px
+                width: 20px
+            &__button
+                width: 100%
+                &:last-child
+                    margin-bottom: 15px
+            &__buttons
+                display: flex
+                flex-direction: column-reverse
+                max-width: 400px
+                
+            &__box
+                margin-bottom: 35px
+                max-width: 400px
+            &__title
+                font-size: 20px
+                margin-bottom: 25px
+                max-width: 450px
+            &__dialog
+                max-width: 555px
+                padding: 25px 10px 110px
+        &-m
+            &__button
+                width: 100%
+                max-width: 400px
+            &__title
+                font-size: 20px
+                margin-bottom: 10px
             &__text
-                font-size: 18px
-        &__text
-            font-size: 20px
-            margin-bottom: 20px
-        &__title
-            font-size: 24px
-            margin-bottom: 20px
+                font-size: 16px
+                margin-bottom: 25px
+            &__box
+                max-width: 400px
+            &__close
+                top: 10px
+                right: 10px
+                width: 20px
+            &__dialog
+                padding: 100px 10px
+                max-width: 555px
+        &-q
+            &__button
+                width: 100%
+                max-width: 280px
+                &:last-child
+                    margin-bottom: 15px
+            &__buttons
+                flex-direction: column-reverse
+                align-items: center
+            &__close
+                top: 10px
+                right: 10px
+                width: 20px
+            &__dialog
+                padding: 25px 10px
+            &__box
+                flex-direction: column
+                max-width: 195px
+                margin-bottom: 35px
+            &__ok
+                width: 25px
+                height: 25px
+            &__label
+                padding-left: 40px
+                width: auto
+                &__text
+                    font-size: 18px
+            &__text
+                font-size: 20px
+                margin-bottom: 20px
+            &__title
+                font-size: 24px
+                margin-bottom: 20px
 
     .main
         background: url(../img/bgC.png) no-repeat center top
         padding-bottom: 25px
+        &--thanks
+            background: url(../img/thanks/bgC.png) no-repeat center top
+            .main__text-bg
+                top: 30%
+            .main__img--thanks
+                &--c
+                    display: block
+                    top: 30%
+                    min-width: 100%
+                    min-height: 70%
+            .main__text-bg
+                display: block
         &__footer
             &__card
                 margin: 5px
-                // width: 100%
-                // max-width: 235px
         &__wrap
             max-width: 350px
         &__button
@@ -143,6 +248,21 @@
 @media screen and ( max-width: 575px )
     .main
         background: url(../img/bgM.png) no-repeat center 0
+        &--thanks
+            background: url(../img/thanks/bgM.png) no-repeat center 0
+            .main__text-bg
+                font-size: 40px
+                top: 200px
+            .main--thanks__text
+                top: 260px
+            .main__img--thanks
+                &--c
+                    display: none
+                &--m
+                    display: block
+                    top: 30%
+                    min-width: 100%
+                    min-height: 70%
         &__footer
             &__card
                 width: 100%

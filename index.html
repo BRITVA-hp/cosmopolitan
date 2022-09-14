@@ -27,6 +27,9 @@
 
                 <img src="img/tel.png" class="header__tel" alt="phone">
 
+                <div class="button header__button header--thanks__button">Закрыть</div>
+                <img class="header__close" src="img/close.png" alt="close">
+
             </div>
 
         </div>
@@ -36,11 +39,20 @@
 
         <section class="section main">
             <p class="main__text-bg">Космополит</p>
+            <!-- <p class="main__text-bg">
+                Спаибо за заявку
+            </p> -->
+            <span class="main--thanks__text">В ближайшее время наш оператор свяжется с Вами для рассчета стоимости</span>
+
             <img class="main__img" src="img/bgBot.png" alt="background">
+
+            <img class="main__img--thanks main__img--thanks--c" src="img/thanks/imgC.png" alt="background">
+
+            <img class="main__img--thanks main__img--thanks--m" src="img/thanks/imgM.png" alt="background">
 
             <p class="main__text-m">Визовый центр в Москве</p>
 
-            <div class="main__box container">
+            <div class="main__box main__box--thanks container">
                 <h1 class="main__title">Оформление виз в любую страну <br> <span>от 2300 руб за 3 дня</span></h1>
 
                 <div class="main__wrap">
@@ -82,7 +94,7 @@
 
     </main>
 
-    <div class="modal modal-q">
+    <div style="display: none;" class="modal modal-q">
         <div class="modal__container">
             <div class="modal-q__dialog">
 
@@ -142,6 +154,54 @@
                     <button class="button modal-q__button">Далее</button>
                 </div>
     
+            </div>
+        </div>
+    </div>
+
+    <div style="display: none;" class="modal modal-m">
+        <div class="modal__container">
+            <div class="modal-m__dialog">
+                <img class="modal-m__close" src="img/close.png" alt="close">
+                <h3 class="modal-m__title">Оформите заявку</h3>
+                <p class="modal-m__text">Для сотрудничества с нами <br> оставьте свои данные</p>
+    
+                <div class="modal-m__box">
+    
+                    <div class="input-group modal-m__input-group">
+                        <input placeholder="Ваше имя" type="text" class="modal-m__input input">
+                    </div>
+    
+                    <div class="input-group modal-m__input-group">
+                        <input placeholder="Телефон" type="tel" class="modal-m__input input">
+                    </div>
+    
+                </div>
+    
+                <button class="button modal-m__button">Отправить</button>
+    
+            </div>
+        </div>
+    </div>
+
+    <div style="display: none;" class="modal modal-l">
+        <div class="modal__container">
+            <div class="modal-l__dialog">
+                <img class="modal-l__close" src="img/close.png" alt="close">
+                <h4 class="modal-l__title">Хорошо. Заполните Ваши контакты и получите стоимость визы + бонус!</h4>
+
+                <div class="modal-l__box">
+                    <div class="input-group modal-l__input-group">
+                        <input placeholder="Ваше имя" type="text" class="input modal-l__inpu2">
+                    </div>
+                    <div class="input-group modal-l__input-group">
+                        <input placeholder="Телефон" type="tel" class="input modal-l__inpu2">
+                    </div>
+                </div>
+
+                <div class="modal-l__buttons">
+                    <button class="button button--back modal-l__button">Назад</button>
+                    <button class="button modal-l__button">Отправить</button>
+                </div>
             </div>
         </div>
     </div>
